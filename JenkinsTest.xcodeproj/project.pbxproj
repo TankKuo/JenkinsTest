@@ -19,13 +19,6 @@
 		292751752763AB5B00DA4E65 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 292751742763AB5B00DA4E65 /* SwiftProtobufPluginLibrary */; };
 		292751782763AB9800DA4E65 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 292751772763AB9800DA4E65 /* GRPC */; };
 		2927517A2763AB9800DA4E65 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 292751792763AB9800DA4E65 /* CGRPCZlib */; };
-		2927517D2763ABB200DA4E65 /* DatadogStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 2927517C2763ABB200DA4E65 /* DatadogStatic */; };
-		2927517F2763ABB200DA4E65 /* DatadogCrashReporting in Frameworks */ = {isa = PBXBuildFile; productRef = 2927517E2763ABB200DA4E65 /* DatadogCrashReporting */; };
-		292751812763ABB200DA4E65 /* DatadogStaticObjc in Frameworks */ = {isa = PBXBuildFile; productRef = 292751802763ABB200DA4E65 /* DatadogStaticObjc */; };
-		292751832763ABB200DA4E65 /* DatadogObjc in Frameworks */ = {isa = PBXBuildFile; productRef = 292751822763ABB200DA4E65 /* DatadogObjc */; };
-		292751842763ABB200DA4E65 /* DatadogObjc in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 292751822763ABB200DA4E65 /* DatadogObjc */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		292751862763ABB200DA4E65 /* Datadog in Frameworks */ = {isa = PBXBuildFile; productRef = 292751852763ABB200DA4E65 /* Datadog */; };
-		292751872763ABB200DA4E65 /* Datadog in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 292751852763ABB200DA4E65 /* Datadog */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +45,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				292751842763ABB200DA4E65 /* DatadogObjc in Embed Frameworks */,
-				292751872763ABB200DA4E65 /* Datadog in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,15 +73,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2927517F2763ABB200DA4E65 /* DatadogCrashReporting in Frameworks */,
 				292751752763AB5B00DA4E65 /* SwiftProtobufPluginLibrary in Frameworks */,
 				2927517A2763AB9800DA4E65 /* CGRPCZlib in Frameworks */,
-				292751862763ABB200DA4E65 /* Datadog in Frameworks */,
-				2927517D2763ABB200DA4E65 /* DatadogStatic in Frameworks */,
 				292751732763AB5B00DA4E65 /* SwiftProtobuf in Frameworks */,
-				292751832763ABB200DA4E65 /* DatadogObjc in Frameworks */,
 				292751782763AB9800DA4E65 /* GRPC in Frameworks */,
-				292751812763ABB200DA4E65 /* DatadogStaticObjc in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,11 +171,6 @@
 				292751742763AB5B00DA4E65 /* SwiftProtobufPluginLibrary */,
 				292751772763AB9800DA4E65 /* GRPC */,
 				292751792763AB9800DA4E65 /* CGRPCZlib */,
-				2927517C2763ABB200DA4E65 /* DatadogStatic */,
-				2927517E2763ABB200DA4E65 /* DatadogCrashReporting */,
-				292751802763ABB200DA4E65 /* DatadogStaticObjc */,
-				292751822763ABB200DA4E65 /* DatadogObjc */,
-				292751852763ABB200DA4E65 /* Datadog */,
 			);
 			productName = JenkinsTest;
 			productReference = 2927513E2763A2AF00DA4E65 /* JenkinsTest.app */;
@@ -265,7 +246,6 @@
 			packageReferences = (
 				292751712763AB5B00DA4E65 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 				292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */,
-				2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */,
 			);
 			productRefGroup = 2927513F2763A2AF00DA4E65 /* Products */;
 			projectDirPath = "";
@@ -665,14 +645,6 @@
 				version = "1.0.0-alpha.21";
 			};
 		};
-		2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Datadog/dd-sdk-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,31 +667,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */;
 			productName = CGRPCZlib;
-		};
-		2927517C2763ABB200DA4E65 /* DatadogStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = DatadogStatic;
-		};
-		2927517E2763ABB200DA4E65 /* DatadogCrashReporting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = DatadogCrashReporting;
-		};
-		292751802763ABB200DA4E65 /* DatadogStaticObjc */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = DatadogStaticObjc;
-		};
-		292751822763ABB200DA4E65 /* DatadogObjc */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = DatadogObjc;
-		};
-		292751852763ABB200DA4E65 /* Datadog */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2927517B2763ABB200DA4E65 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = Datadog;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
