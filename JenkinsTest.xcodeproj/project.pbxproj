@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,10 +15,6 @@
 		2927514E2763A2B100DA4E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2927514C2763A2B100DA4E65 /* LaunchScreen.storyboard */; };
 		292751592763A2B100DA4E65 /* JenkinsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292751582763A2B100DA4E65 /* JenkinsTestTests.swift */; };
 		292751642763A2B100DA4E65 /* JenkinsTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292751632763A2B100DA4E65 /* JenkinsTestUITests.swift */; };
-		292751732763AB5B00DA4E65 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 292751722763AB5B00DA4E65 /* SwiftProtobuf */; };
-		292751752763AB5B00DA4E65 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 292751742763AB5B00DA4E65 /* SwiftProtobufPluginLibrary */; };
-		292751782763AB9800DA4E65 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 292751772763AB9800DA4E65 /* GRPC */; };
-		2927517A2763AB9800DA4E65 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 292751792763AB9800DA4E65 /* CGRPCZlib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				292751752763AB5B00DA4E65 /* SwiftProtobufPluginLibrary in Frameworks */,
-				2927517A2763AB9800DA4E65 /* CGRPCZlib in Frameworks */,
-				292751732763AB5B00DA4E65 /* SwiftProtobuf in Frameworks */,
-				292751782763AB9800DA4E65 /* GRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,10 +159,6 @@
 			);
 			name = JenkinsTest;
 			packageProductDependencies = (
-				292751722763AB5B00DA4E65 /* SwiftProtobuf */,
-				292751742763AB5B00DA4E65 /* SwiftProtobufPluginLibrary */,
-				292751772763AB9800DA4E65 /* GRPC */,
-				292751792763AB9800DA4E65 /* CGRPCZlib */,
 			);
 			productName = JenkinsTest;
 			productReference = 2927513E2763A2AF00DA4E65 /* JenkinsTest.app */;
@@ -244,8 +232,6 @@
 			);
 			mainGroup = 292751352763A2AF00DA4E65;
 			packageReferences = (
-				292751712763AB5B00DA4E65 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
-				292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */,
 			);
 			productRefGroup = 2927513F2763A2AF00DA4E65 /* Products */;
 			projectDirPath = "";
@@ -627,48 +613,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		292751712763AB5B00DA4E65 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-protobuf.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.13.0;
-			};
-		};
-		292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/grpc/grpc-swift.git";
-			requirement = {
-				kind = exactVersion;
-				version = "1.0.0-alpha.21";
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		292751722763AB5B00DA4E65 /* SwiftProtobuf */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 292751712763AB5B00DA4E65 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobuf;
-		};
-		292751742763AB5B00DA4E65 /* SwiftProtobufPluginLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 292751712763AB5B00DA4E65 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobufPluginLibrary;
-		};
-		292751772763AB9800DA4E65 /* GRPC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */;
-			productName = GRPC;
-		};
-		292751792763AB9800DA4E65 /* CGRPCZlib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 292751762763AB9800DA4E65 /* XCRemoteSwiftPackageReference "grpc-swift" */;
-			productName = CGRPCZlib;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 292751362763A2AF00DA4E65 /* Project object */;
 }
